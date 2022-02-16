@@ -29,7 +29,7 @@ body{
     width: 24em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 110%;
+    font-size: 100%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -98,4 +98,105 @@ body{
         font-size: 60%;
      
     } 
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  font-family     : "Times New Roman", Times, serif;
+}
+
+.wrapper {
+  display        : flex;
+  justify-content: space-around;
+  align-items    : baseline;
+  padding        : 3em 1em 3em 1em;
+}
+
+.box {
+  display: inline-block;
+}
+
+.letter {
+  text-align : center;
+  font-size  : 70%;
+  margin     : 0;
+  font-weight: bold;
+  color      : white;
+  line-height: 0.55;
+ 
+}
+
+@keyframes bounce {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+
+  to {
+      transform: translate3d(0, -10px, 0);
+  }
+}
+
+.bounce {
+  animation                : bounce 0.4s;
+  animation-iteration-count: infinite;
+  animation-direction      : alternate;
+}
+
+@keyframes color-change {
+  from {
+      color: #ff8a00;
+  }
+
+  to {
+      color: #0075ff;
+  }
+}
+
+.color-change {
+  color    : #ff8a00;
+  animation: color-change 2s infinite alternate;
+}
+
+@keyframes appear {
+  0% {
+      font-size: 0;
+      opacity  : 0;
+  }
+
+  50% {
+      font-size: 4em;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear 3s alternate infinite;
+}
+
+@keyframes rotate {
+  from {
+      opacity  : 0;
+      transform: rotate(90deg)
+  }
+
+  to {
+      transform: rotate(0deg)
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.rotate {
+  animation: rotate 3s infinite;
 }
